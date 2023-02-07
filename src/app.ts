@@ -1,0 +1,34 @@
+// import winstonConfig from './config/winston.config';
+import { Express } from 'express';
+// import { compressionConfig } from './config/compression.config';
+// import { corsConfig } from './config/cors.config';
+import { errorHandlerConfig } from './config/error-handler.config';
+import expressConfig from './config/express.config';
+// import knexConfig from './config/knex.config';
+// import { limiterConfig } from './config/limiter.config';
+import { securityConfig } from './config/security.config';
+import { swaggerConfig } from './config/swagger-config';
+// import { connect as connectDb } from './config/mongoose.config';
+// import bullBoardConfig from '@config/bull-board.config';
+// import { firebaseInit } from '@config/firebase.config';
+// import { schedulers } from '@config/scheduler.config';
+// import queueConfig from '@config/queue.config';
+// import statusMonitorConfig from '@config/status-monitor.config';
+
+export const buildApp = function (app: Express) {
+  // connectDb();
+  // firebaseInit();
+  // knexConfig();
+  // queueConfig();
+  // schedulers();
+  // limiterConfig(app);
+  // corsConfig(app);
+  // statusMonitorConfig(app);
+  // compressionConfig(app);
+  // bullBoardConfig(app);
+  expressConfig(app);
+  // winstonConfig(app);
+  securityConfig(app);
+  swaggerConfig(app);
+  errorHandlerConfig(app);
+};
